@@ -7,7 +7,7 @@ package examen;
 public class Solucion {
     public boolean problema(String s){
         String r, sub;
-        boolean band = false;
+        boolean band = true;
         
         for (int i = 0; i < s.length(); i++){
             for (int j = i + 1; j <= s.length(); j++){
@@ -18,12 +18,14 @@ public class Solucion {
                     continue;
                 
                 while(!r.equals("")){
-                    if(!r.startsWith(sub))
+                    if(!r.startsWith(sub)){
                         band = false;
-                    r = r.substring(sub.length() - 1, s.length() - 1);
-                    System.out.println(r.length());
+                        break;
+                    }
+                    r = r.substring(sub.length(), s.length() - 1);
                 }
-                if(band)
+                
+                if(r.equals(""))
                     return true;
                 //System.out.println(s.substring(i, j)); 
            }
