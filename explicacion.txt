@@ -1,0 +1,19 @@
+Podemos probar cada subcadena sin contemplar la primera.
+
+Para dicho efecto es necesario tener una forma de iterar cada posible subcadena.
+Nos auxiliaremos de un par de for's y el método substring.
+
+Entonces, para cada subcadena checaremos si el string original comienza por dicha subcadena.
+En caso afirmativo procederemos a recortar la cadena al tamaño de la cadena dada y realizar la comparación anterior.
+Y así sucesivamente hasta llegar al resultado.
+
+Ejemplo:
+	C = "ferfer"
+	Cuando se analice la subcadena "fer" llegaremos a que, en la primera comparación
+	"ferfer" efectivamente empieza con la subcadena "fer"
+	Luego la cadena se recorta de "ferfer" a "fer". La cual es igual a la subcadena "fer"
+	Entonces llegamos a la conclusión de que si se puede y regresamos verdadero.
+
+La mejora que se le puede hacer al problema sería en el caso de probar todas las subcadenas.
+Ya que este algoritmo es de complejidad O(2^n), lo cual puede resultar en mucho tiempo de procesamiento
+en caso de ser un string con gran longitud.

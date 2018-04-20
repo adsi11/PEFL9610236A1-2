@@ -11,7 +11,7 @@ public class Examen {
      */
     public static void main(String[] args) {
         Solucion s = new Solucion();
-        System.out.println(s.problema("abc"));
+        System.out.println(s.problema("ferfer"));
     }
     
 }
